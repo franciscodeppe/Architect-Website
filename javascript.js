@@ -1,14 +1,26 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
+$(document).ready(function() {
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].onclick = function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  }
-}
+  activePanel = $("#accordion div.panel:first");
+  $(activePanel).addClass('active');
+
+  $("#accordion").delegate('.panel', 'click', function(e) {
+    if (!$(this).is('.active')) {
+
+      $(activePanel).animate({
+        width: "44px"
+      }, {
+        duration: 300,
+        queue: false
+      });
+      $(this).animate({
+        width: "848px"
+      }, {
+        duration: 300,
+        queue: false
+      });
+      $('#accordion .panel').removeClass('active');
+      $(this).addClass('active');
+      activePanel = this;
+    };
+  });
+});
