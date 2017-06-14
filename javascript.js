@@ -7,13 +7,13 @@ $(document).ready(function() {
     if (!$(this).is('.active')) {
 
       $(activePanel).animate({
-        width: "44px"
+        width: "25%"
       }, {
         duration: 300,
         queue: false
       });
       $(this).animate({
-        width: "848px"
+        width: "50%"
       }, {
         duration: 300,
         queue: false
