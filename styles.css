@@ -11,16 +11,16 @@ p {
 #accordion {
 	list-style:none;
 	padding:0;
-	height:600px;
+	height:100vh;
 	width:100%;
 	overflow:hidden;
 	border-radius: 0px;
-	position: absolute;
+	float: left;
 }
 #accordion .panel {
 	float:left;
 	display:block;
-	height:600px;
+	height:100vh;
 	width:25%;
 	overflow:hidden;
 	text-decoration:none;
@@ -38,24 +38,37 @@ p {
 .last {
 	border:none
 }
-.about {
-	background-color: #bb6622;
+#about {
+	background-color: #f28423;
 	color: black;
 }
-.about h1 {
+#about h1 {
 	font-weight: 600;
 }
-.firm {
+.heading-text {
+	padding: 20px;
+}
+#firm {
 	background-color: black;
 	color: white;
 }
-.firm h1 {
-	
+#firm h1 {
+
 }
-.services {
+#services {
 	background-color: #b1200f;
 	color: black;
 }
-.services h1 {
+#services h1 {
 	font-weight: 600;
+}
+
+.portfolio {
+	background-color: white;
+	float: left;
+}
+.projects {
+	background-color: black;
+	float: left;
+	color: white;
 }
