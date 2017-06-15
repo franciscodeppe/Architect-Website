@@ -100,3 +100,19 @@ p {
 .navbar-fixed-bottom {
 	height: 70px;
 }
+.dropdown-menu {
+	background-color: #222;
+	text-align: center;
+}
+.dropdown-menu li a {
+	color: #9d9d9d;
+}
+.nav-1 {
+	padding-left: 40px;
+}
+.nav-2 {
+
+}
+.dropdown-li {
+	text-align: center;
+}
