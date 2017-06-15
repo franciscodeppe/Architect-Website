@@ -8,7 +8,10 @@ h1 {
 p {
 	font-family: 'Oswald', sans-serif;
 }
+
+/*Landing Page*/
 #accordion {
+	background-color: black;
 	list-style:none;
 	padding:0;
 	height:100vh;
@@ -38,37 +41,62 @@ p {
 .last {
 	border:none
 }
-#about {
+#armet {
 	background-color: #f28423;
 	color: black;
 }
-#about h1 {
+#armet h1 {
 	font-weight: 600;
 }
 .heading-text {
-	padding: 20px;
-}
-#firm {
-	background-color: black;
-	color: white;
-}
-#firm h1 {
 
 }
-#services {
+#davis {
+	background-color: black;
+	color: #9d9d9d;
+}
+#davis h1 {
+
+}
+#newlove {
 	background-color: #b1200f;
 	color: black;
 }
-#services h1 {
+#newlove h1 {
 	font-weight: 600;
 }
 
-.portfolio {
+/*Content*/
+
+.about {
+	padding-bottom: 35px;
 	background-color: white;
-	float: left;
 }
+
 .projects {
+	background-color: #9d9d9d;
+	color: #222;
+}
+.architects {
+	background-color: #f28423;
+
+	color: black;
+}
+.licenses {
 	background-color: black;
-	float: left;
-	color: white;
+	color: #9d9d9d;
+}
+.clients {
+	background-color: #b1200f;
+	color: black;
+
+}
+.contact {
+	background-color: #222;
+	color: #9d9d9d;
+}
+
+/*Navbar*/
+.navbar-fixed-bottom {
+	height: 70px;
 }
