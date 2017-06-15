@@ -38,18 +38,52 @@ $('ul.nav li.dropdown').hover(function() {
 });
 
 // Color Rotation
-var colorPallete = ['9d9d9d','f28423','b1200f','5b9f90','white','black','dacd43','d45f33','872729',]
+var colorPallete = ['#5b9f90','white','#dacd43','#d45f33','#872729','#f28423']
 
-var colorMatch = {
-  dark: ['872729', '032042', '613b24', 'black'],
-  light: ['dacd43', '5b9f90', 'd45f33', 'white'],
+var dark = ['#872729', '#d45f33', '#b1200f']
+
+var light = ['dacd43', '5b9f90', 'd45f33', 'white']
+
+var intervalId;
+
+
+function run () {
+	intervalId = setInterval(changeColor, 4000)
+
+}
+$.cssHooks.backgroundColor = {
+    get: function(elem) {
+        if (elem.currentStyle)
+            var bg = elem.currentStyle["backgroundColor"];
+        else if (window.getComputedStyle)
+            var bg = document.defaultView.getComputedStyle(elem,
+                null).getPropertyValue("background-color");
+        if (bg.search("rgb") == -1)
+            return bg;
+        else {
+            bg = bg.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+            function hex(x) {
+                return ("0" + parseInt(x).toString(16)).slice(-2);
+            }
+            return "#" + hex(bg[1]) + hex(bg[2]) + hex(bg[3]);
+        }
+    }
 }
 
-function changeColor() {
-  for (var i = 0; i < colorPallete.length; i++) {
-    $("#armet").css("background-color:" + [i])
-    $("#davis").css("background-color:" + [i+1])
-    $("#newlove").css("background-color:" + [i+2])
-  }
+function changeColor(event) {
+	var color1 = Math.floor(colorPallete.length * Math.random());
+	var color2 = Math.floor(colorPallete.length * Math.random());
+	var color3 = Math.floor(colorPallete.length * Math.random());
+	console.log(color1, color2, color3)
+	if (color2 === color1 || color2 === color3) {
+		color2 = Math.floor(colorPallete.length * Math.random());
+	}
+
+    $("#armet").css({"background-color": colorPallete[color1]})
+	$("#davis").css({"background-color": colorPallete[color2]})
+	$("#newlove").css({"background-color": colorPallete[color3]})
+	// console.log("pass")
+
+
 }
-setInterval(changeColor(), 1000)
+run()

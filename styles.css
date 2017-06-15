@@ -4,6 +4,7 @@ html {
 h1 {
 	font-family: 'Oswald', sans-serif;
 	font-size: 45px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 p {
 	font-family: 'Oswald', sans-serif;
@@ -46,7 +47,7 @@ p {
 }
 #armet {
 	background-color: #f28423;
-	color: black;
+	color: white;
 }
 #armet h1 {
 	font-weight: 600;
@@ -55,15 +56,15 @@ p {
 
 }
 #davis {
-	background-color: black;
-	color: #9d9d9d;
+	background-color: white;
+	color: black;
 }
 #davis h1 {
 
 }
 #newlove {
-	background-color: #b1200f;
-	color: black;
+	background-color: #872729;
+	color: white;
 }
 #newlove h1 {
 	font-weight: 600;
