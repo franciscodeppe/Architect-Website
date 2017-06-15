@@ -1,5 +1,6 @@
 html {
 	background-color: #342e3a;
+	letter-spacing: 1.5px;
 }
 h1 {
 	font-family: 'Oswald', sans-serif;
@@ -9,6 +10,7 @@ h1 {
 p {
 	font-family: 'Oswald', sans-serif;
 	font-size: 18px;
+	word-spacing: 2px;
 
 }
 
@@ -26,7 +28,7 @@ p {
 }
 #accordion .panel {
 	float:left;
-	display:block;
+	padding-bottom: 75px;
 	height:100vh;
 	width:25%;
 	overflow:hidden;
@@ -41,7 +43,8 @@ p {
 }
 
 .panelContent h1 {
-	padding-left: 20px;
+
+	text-align: center;
 }
 
 .last {
@@ -51,6 +54,9 @@ p {
 	background-color: #f28423;
 	color: white;
 	border-left: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 #armet h1 {
 	font-weight: 600;
@@ -61,13 +67,20 @@ p {
 #davis {
 	background-color: white;
 	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 #davis h1 {
+	font-weight: 600;
 
 }
 #newlove {
 	background-color: #872729;
 	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 #newlove h1 {
 	font-weight: 600;
@@ -82,7 +95,7 @@ p {
 }
 
 .projects {
-	background-color: #9d9d9d;
+	background-color: #white;
 	color: #222;
 	padding-bottom: 50px;
 }

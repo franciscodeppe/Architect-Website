@@ -1,23 +1,25 @@
 $(document).ready(function() {
 
-  activePanel = $("#accordion div.panel:first");
+  var activePanel;
   $(activePanel).addClass('active');
+  $("#accordion .panel").css({width: "33%"});
 
   $("#about").attr("")
 
-
+// Accordian
   $("#accordion .panel").hover(function() {
-    if (!$(this).is('.active')) {
+    if ($(this).is('.active') !== true) {
 
-      $(activePanel).animate({
-        width: "25%"
+      $('#accordion .panel').animate({
+        width: "20%"
       }, {
         duration: 300,
         queue: false
       });
 
       $(this).animate({
-        width: "50%"
+        width: "60%"
+        align-items: ,
       }, {
         duration: 300,
         queue: false
@@ -26,9 +28,19 @@ $(document).ready(function() {
       $('#accordion .panel').removeClass('active');
       $(this).addClass('active');
       activePanel = this;
-    };
+
+    } else {
+      $('#accordion .panel').removeClass('active');
+      $("#accordion .panel").animate({
+        width: "33%"
+      }, {
+        duration: 300,
+        queue: false
+      });
+    }
   });
 });
+
 
 // Dropwdown menu
 $('ul.nav li.dropdown').hover(function() {
@@ -75,11 +87,11 @@ $.cssHooks.backgroundColor = {
 }
 
 function changeColorArmet() {
-  console.log(1)
   color1 = Math.floor(colorPallete.length * Math.random());
-  if (color1 === color1 && color1 === color2) {
+  if (color1 === color1 || color1 === color2) {
     color1 = Math.floor(colorPallete.length * Math.random());
   }
+  console.log(1, color1)
   $("#armet").css({
     "background-color": colorPallete[color1]
   })
@@ -88,12 +100,12 @@ function changeColorArmet() {
 }
 
 function changeColorDavis() {
-  console.log(2)
   color2 = Math.floor(colorPallete.length * Math.random());
 
-  if (color2 === color1 && color2 === color2) {
+  if (color2 === color1 || color2 === color2) {
     color2 = Math.floor(colorPallete.length * Math.random());
   }
+  console.log(2, color2)
   $("#davis").css({
     "background-color": colorPallete[color2]
   })
@@ -102,12 +114,12 @@ function changeColorDavis() {
 }
 
 function changeColorNewlove() {
-  console.log(3)
   var color3 = Math.floor(colorPallete.length * Math.random());
 
-  if (color3 === color2 && color3 === color3) {
-    color2 = Math.floor(colorPallete.length * Math.random());
+  if (color3 === color2 || color3 === color3) {
+    color3 = Math.floor(colorPallete.length * Math.random());
   }
+  console.log(3, color3)
   $("#newlove").css({
     "background-color": colorPallete[color3]
   })
