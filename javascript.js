@@ -11,24 +11,22 @@ $(document).ready(function() {
     if ($(this).is('.active') !== true) {
 
       $('#accordion .panel').animate({
-        width: "20%"
+        width: "20%",
       }, {
         duration: 300,
         queue: false
-      });
+      }).animate({ alignItems: "flex-start"},{duration:300 });
+
+      $('#accordion .panel').removeClass('active');
+
+      $(this).addClass('active');
 
       $(this).animate({
         width: "60%"
-        align-items: ,
       }, {
         duration: 300,
         queue: false
-      });
-
-      $('#accordion .panel').removeClass('active');
-      $(this).addClass('active');
-      activePanel = this;
-
+      }).animate({ alignItems: "flex-start"},{duration:300 });
     } else {
       $('#accordion .panel').removeClass('active');
       $("#accordion .panel").animate({
