@@ -7,13 +7,6 @@ $(document).ready(function() {
 
 
   $("#accordion .panel").hover(function() {
-    if (($(this)[0].id != "about")) {
-      console.log(true)
-    }
-    else {
-      console.log(false)
-    }
-
     if (!$(this).is('.active')) {
 
       $(activePanel).animate({
@@ -22,15 +15,6 @@ $(document).ready(function() {
         duration: 300,
         queue: false
       });
-
-      if (($(this)[0].id != "about")) {
-        $(".about-text").animate({
-          opacity: 0,
-        }, {
-          duration: 300,
-          queue: false
-        });
-      }
 
       $(this).animate({
         width: "50%"
@@ -52,3 +36,20 @@ $('ul.nav li.dropdown').hover(function() {
 }, function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(300);
 });
+
+// Color Rotation
+var colorPallete = ['9d9d9d','f28423','b1200f','5b9f90','white','black','dacd43','d45f33','872729',]
+
+var colorMatch = {
+  dark: ['872729', '032042', '613b24', 'black'],
+  light: ['dacd43', '5b9f90', 'd45f33', 'white'],
+}
+
+function changeColor() {
+  for (var i = 0; i < colorPallete.length; i++) {
+    $("#armet").css("background-color:" + [i])
+    $("#davis").css("background-color:" + [i+1])
+    $("#newlove").css("background-color:" + [i+2])
+  }
+}
+setInterval(changeColor(), 1000)
