@@ -6,7 +6,7 @@ $(document).ready(function() {
   $("#about").attr("")
 
 
-  $("#accordion").on('click', '.panel', function() {
+  $("#accordion .panel").hover(function() {
     if (($(this)[0].id != "about")) {
       console.log(true)
     }
@@ -44,4 +44,11 @@ $(document).ready(function() {
       activePanel = this;
     };
   });
+});
+
+// Dropwdown menu
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(300);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(300);
 });
