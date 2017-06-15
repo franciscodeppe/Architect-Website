@@ -7,7 +7,10 @@ h1 {
 }
 p {
 	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+
 }
+
 
 /*Landing Page*/
 #accordion {
@@ -71,29 +74,42 @@ p {
 .about {
 	padding-bottom: 35px;
 	background-color: white;
+	padding-bottom: 50px;
 }
 
 .projects {
 	background-color: #9d9d9d;
 	color: #222;
+	padding-bottom: 50px;
 }
 .architects {
 	background-color: #f28423;
-
+padding-bottom: 50px;
 	color: black;
 }
 .licenses {
 	background-color: black;
 	color: #9d9d9d;
+	padding-bottom: 50px;
 }
 .clients {
 	background-color: #b1200f;
-	color: black;
+	color: white;
+	padding-bottom: 50px;
 
 }
 .contact {
 	background-color: #222;
 	color: #9d9d9d;
+	padding-bottom: 100px;
+}
+
+/*spacer*/
+.spacer {
+	height: 35px;
+	border-top: 5px solid black;
+	border-bottom: 5px solid black;
+	background-image: url("http://www.texturex.com/albums/Wood-Textures/red%20wood%20texture%20grain%20natural%20wooden%20paneling%20surface%20photo%20wallpaper.jpg")
 }
 
 /*Navbar*/
