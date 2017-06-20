@@ -7,7 +7,7 @@ $(document).ready(function() {
   $("#about").attr("")
 
 // Accordian
-  $("#accordion .panel").hover(function() {
+  $("#accordion .panel").on('click', function() {
     if ($(this).is('.active') !== true) {
 
       $('#accordion .panel').animate({
