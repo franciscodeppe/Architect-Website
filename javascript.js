@@ -32,6 +32,8 @@ $(document).ready(function() {
       $("#accordion .panel").animate({
         width: "33%"
     });
+  };
+});
 
 
 // Dropwdown menu
@@ -126,3 +128,4 @@ function run() {
     intervalId1 = setInterval(changeColorArmet, 500)
 }
 run()
+})
