@@ -123,12 +123,9 @@ padding-bottom: 50px;
 
 /*spacer*/
 .spacer {
-	height: 35px;
 	border-top: 5px solid black;
 	border-bottom: 5px solid black;
-	background-image: url("http://www.texturex.com/albums/Wood-Textures/red%20wood%20texture%20grain%20natural%20wooden%20paneling%20surface%20photo%20wallpaper.jpg")
 }
-
 
 /*Navbar*/
 .navbar-fixed-bottom {

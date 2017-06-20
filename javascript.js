@@ -95,11 +95,8 @@ $.cssHooks.backgroundColor = {
 }
 
 function changeColorArmet() {
-    color1 = Math.floor(colorPallete.length * Math.random());
-    while (color1 === color2 || color1 === color3) {
-        color1 = Math.floor(colorPallete.length * Math.random());
-        console.log("oops")
-    }
+    color1 = colorPallete[1]
+
     // console.log(1, color1)
     $("#armet").css({
         "background-color": colorPallete[color1]
@@ -109,12 +106,7 @@ function changeColorArmet() {
 }
 
 function changeColorDavis() {
-    color2 = Math.floor(colorPallete.length * Math.random());
-
-    while (color2 === color1 || color2 === color3) {
-        color2 = Math.floor(colorPallete.length * Math.random());
-        console.log("oops")
-    }
+    color2 =
     // console.log(2, color2)
     $("#davis").css({
         "background-color": colorPallete[color2]
@@ -124,12 +116,7 @@ function changeColorDavis() {
 }
 
 function changeColorNewlove() {
-    color3 = Math.floor(colorPallete.length * Math.random());
-
-    while (color3 === color2 || color3 === color1) {
-        color3 = Math.floor(colorPallete.length * Math.random());
-        console.log("oops")
-    }
+    color3 =
     // console.log(3, color3)
     $("#newlove").css({
         "background-color": colorPallete[color3]
