@@ -1,52 +1,38 @@
 $(document).ready(function() {
 
-    var activePanel;
-    $(activePanel).addClass('active');
-    $("#accordion .panel").css({
+  var activePanel;
+  $(activePanel).addClass('active');
+  $("#accordion .panel").css({width: "33%"});
+
+  $("#about").attr("")
+
+// Accordian
+  $("#accordion .panel").on('click', function() {
+    if ($(this).is('.active') !== true) {
+
+      $('#accordion .panel').animate({
+        width: "20%",
+      }, {
+        duration: 300,
+        queue: false
+      }).animate({ alignItems: "flex-start"},{duration:300 });
+
+      $('#accordion .panel').removeClass('active');
+
+      $(this).addClass('active');
+
+      $(this).animate({
+        width: "60%"
+      }, {
+        duration: 300,
+        queue: false
+      }).animate({ alignItems: "flex-start"},{duration:300 });
+    } else {
+      $('#accordion .panel').removeClass('active');
+      $("#accordion .panel").animate({
         width: "33%"
     });
-
-    $("#about").attr("")
-
-    // Accordian
-    $("#accordion .panel").hover(function() {
-        if ($(this).is('.active') !== true) {
-
-            $('#accordion .panel').animate({
-                width: "20%",
-            }, {
-                duration: 300,
-                queue: false
-            }).animate({
-                alignItems: "flex-start"
-            }, {
-                duration: 300
-            });
-
-            $('#accordion .panel').removeClass('active');
-
-            $(this).addClass('active');
-
-            $(this).animate({
-                width: "60%"
-            }, {
-                duration: 300,
-                queue: false
-            }).animate({
-                alignItems: "flex-start"
-            }, {
-                duration: 300
-            });
-        } else {
-            $('#accordion .panel').removeClass('active');
-            $("#accordion .panel").animate({
-                width: "33%"
-            }, {
-                duration: 300,
-                queue: false
-            });
-        }
-    });
+  };
 });
 
 
@@ -129,3 +115,4 @@ function run() {
     intervalId1 = setInterval(changeColorArmet, 500)
 }
 run()
+})
