@@ -123,8 +123,7 @@ padding-bottom: 50px;
 
 /*spacer*/
 .spacer {
-	border-top: 5px solid black;
-	border-bottom: 5px solid black;
+	border-top: 10px solid black;
 }
 
 /*Navbar*/

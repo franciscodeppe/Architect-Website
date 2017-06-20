@@ -1,40 +1,47 @@
 $(document).ready(function() {
 
-  var activePanel;
-  $(activePanel).addClass('active');
-  $("#accordion .panel").css({width: "33%"});
-
-  $("#about").attr("")
-
-// Accordian
-  $("#accordion .panel").on('click', function() {
-    if ($(this).is('.active') !== true) {
-
-      $('#accordion .panel').animate({
-        width: "20%",
-      }, {
-        duration: 300,
-        queue: false
-      }).animate({ alignItems: "flex-start"},{duration:300 });
-
-      $('#accordion .panel').removeClass('active');
-
-      $(this).addClass('active');
-
-      $(this).animate({
-        width: "60%"
-      }, {
-        duration: 300,
-        queue: false
-      }).animate({ alignItems: "flex-start"},{duration:300 });
-    } else {
-      $('#accordion .panel').removeClass('active');
-      $("#accordion .panel").animate({
+    var activePanel;
+    $(activePanel).addClass('active');
+    $("#accordion .panel").css({
         width: "33%"
     });
-  };
-});
 
+    $("#about").attr("")
+
+    // Accordian
+    $("#accordion .panel").on('click', function() {
+        if ($(this).is('.active') !== true) {
+            $('#accordion .panel').animate({
+                width: "20%",
+            }, {
+                duration: 300,
+                queue: false
+            }).animate({
+                alignItems: "flex-start"
+            }, {
+                duration: 300
+            });
+            $('#accordion .panel').removeClass('active');
+            $(this).addClass('active');
+            $(this).animate({
+                width: "60%"
+            }, {
+                duration: 300,
+                queue: false
+            }).animate({
+                alignItems: "flex-start"
+            }, {
+                duration: 300
+            });
+        } else {
+            $('#accordion .panel').removeClass('active');
+            $("#accordion .panel").animate({
+                width: "33%"
+            });
+        };
+		
+    });
+})
 
 // Dropwdown menu
 $('ul.nav li.dropdown').hover(function() {
@@ -82,8 +89,7 @@ $.cssHooks.backgroundColor = {
 
 function changeColorArmet() {
     color1 = colorPallete[1]
-
-    // console.log(1, color1)
+    console.log(1, color1)
     $("#armet").css({
         "background-color": colorPallete[color1]
     })
@@ -93,20 +99,20 @@ function changeColorArmet() {
 
 function changeColorDavis() {
     color2 =
-    // console.log(2, color2)
-    $("#davis").css({
-        "background-color": colorPallete[color2]
-    })
+        console.log(2, color2)
+        $("#davis").css({
+            "background-color": colorPallete[color2]
+        })
     clearInterval(intervalId2)
     intervalId3 = setInterval(changeColorNewlove, 500)
 }
 
 function changeColorNewlove() {
     color3 =
-    // console.log(3, color3)
-    $("#newlove").css({
-        "background-color": colorPallete[color3]
-    })
+        console.log(3, color3)
+        $("#newlove").css({
+            "background-color": colorPallete[color3]
+        })
     clearInterval(intervalId3)
     run()
 }
@@ -115,4 +121,3 @@ function run() {
     intervalId1 = setInterval(changeColorArmet, 500)
 }
 run()
-})
