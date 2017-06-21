@@ -1,185 +1,221 @@
 html {
-	background-color: #342e3a;
-	letter-spacing: 1.5px;
+  background-color: #342e3a;
+  letter-spacing: 1.5px;
 }
+
 body {
-	width: 100vw;
+  width: 100%;
+	overflow-x: hidden;
 }
 
 p {
-	font-family: 'Oswald', sans-serif;
-	font-size: 18px;
-	word-spacing: 2px;
-
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  word-spacing: 2px;
 }
 
 
 /*Landing Page--------------------------------------*/
-#accordion {
-	background-color: black;
-	list-style:none;
-	padding:0;
-	height:100vh;
-	width:100%;
-	overflow:hidden;
-	border-radius: 0px;
-	float: left;
-	border-bottom: 20px solid black;
-}
-#accordion .panel {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	float:left;
-	height:100vh;
-	width:25%;
-	overflow:hidden;
-	padding-left: 30px;
-	border-right: 15px solid black;
 
+#accordion {
+  background-color: black;
+  list-style: none;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  border-radius: 0px;
+  float: left;
+  border-bottom: 20px solid black;
 }
+
+#accordion .panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  float: left;
+  height: 100vh;
+  width: 25%;
+  overflow: hidden;
+  padding-left: 30px;
+  border-right: 15px solid black;
+}
+
 #accordion .panel.active {
-	width:50%;
+  width: 50%;
 }
+
 #armet {
-	background-color: #f28423;
-	color: white;
-	border-left: none;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  background-color: #f28423;
+  color: white;
+  border-left: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #davis {
-	background-color: white;
-	color: black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 #newlove {
-	background-color: #872729;
-	color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  background-color: #872729;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .panel-title {
-	font-family: 'Oswald', sans-serif;
-	font-size: 45px;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	text-align: center;
-	z-index: 1;
-	font-weight: 600;
-	position: relative;
-	top: 48vh;
-	justify-content: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 45px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-align: center;
+  z-index: 1;
+  font-weight: 600;
+  position: relative;
+  top: 48vh;
+  justify-content: center;
 }
+
+.panel-text {
+  text-align: center;
+  position: relative;
+  width: 40vw;
+  top: 30vh;
+  left: 10vw;
+}
+
 .last {
-	border:none
+  border: none
 }
+
 .panelContent {
-	z-index: 1;
+  z-index: 1;
 }
+
 
 /*Content---------------------------------------*/
+
 .our-work {
-	background-color: #white;
-	color: #222;
-	padding-bottom: 50px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	padding-left: 50px;
-	padding-right: 50px;
-
+  background-color: #white;
+  color: #222;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
 }
+
 .our-work-div {
-	margin: 25px;
+  margin: 25px;
+  min-width: 400px;
+  min-height: 400px;
 	width: 400px;
-	height: 400px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
+
 .our-work img {
-	width: 100%;
-
+  width: 100%;
 }
 
-.our-work-div h1 {
-	position: absolute;
-
+.our-work-div-info {
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  display: none;
 }
 
 
 /*page-2--------------------------------------*/
-.about {
-	padding-bottom: 35px;
-	background-color: white;
-	padding-bottom: 50px;
-}
-.architects {
-	background-color: #f28423;
-	padding-bottom: 50px;
-	color: black;
-}
-.licenses {
-	background-color: black;
-	color: #9d9d9d;
-	padding-bottom: 50px;
-}
-.clients {
-	background-color: #b1200f;
-	color: white;
-	padding-bottom: 50px;
 
+.about {
+  padding-bottom: 35px;
+  background-color: white;
+  padding-bottom: 50px;
 }
+
+.architects {
+  background-color: #f28423;
+  padding-bottom: 50px;
+  color: black;
+}
+
+.licenses {
+  background-color: black;
+  color: #9d9d9d;
+  padding-bottom: 50px;
+}
+
+.clients {
+  background-color: #b1200f;
+  color: white;
+  padding-bottom: 50px;
+}
+
 
 /*Contact----------------------------------------*/
+
 .contact {
-	background-color: #222;
-	color: #9d9d9d;
-	padding-bottom: 100px;
+  background-color: #222;
+  color: #9d9d9d;
+  padding-bottom: 100px;
 }
+
 .contact-title {
-	margin-bottom: 25px;
+  margin-bottom: 25px;
 }
-.red{
-    color:red;
-    }
+
+.red {
+  color: red;
+}
+
 .form-area {
-	padding: 0px 40px 60px;
-	border-radius: 5px;
-	}
+  padding: 0px 40px 60px;
+  border-radius: 5px;
+}
+
 
 /*spacer--------------------------------------*/
+
 .spacer {
-	border-top: 5px solid black;
+  border-top: 5px solid black;
 }
+
 
 /*Navbar--------------------------------------*/
-.navbar-fixed-bottom {
-	height: 70px;
-}
-.dropdown-menu {
-	background-color: #222;
-	text-align: center;
-}
-.dropdown-menu li a {
-	color: #9d9d9d;
-}
-.nav-1 {
-	padding-left: 40px;
-}
-.nav-2 {
 
+.navbar-fixed-bottom {
+  height: 70px;
 }
+
+.dropdown-menu {
+  background-color: #222;
+  text-align: center;
+}
+
+.dropdown-menu li a {
+  color: #9d9d9d;
+}
+
+.nav-1 {
+  padding-left: 40px;
+}
+
+.nav-2 {}
+
 .dropdown-li {
-	text-align: center;
+  text-align: center;
 }

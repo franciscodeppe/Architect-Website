@@ -12,6 +12,8 @@ $(document).ready(function() {
     $("#accordion .panel").on('click', function(event) {
       event.preventDefault()
         if ($(this).is('.active') !== true) {
+// inactive panels---------------------------------------
+
             $('#accordion .panel').animate({
                 width: "20%",
             }, {
@@ -27,6 +29,9 @@ $(document).ready(function() {
               left: "-30vh",
             });
             $('#accordion .panel').removeClass('active');
+
+// For active panel --------------------------------------
+
             $(this).addClass('active');
             $(this).find(".panel-title").animate({
               top: "25vh",
@@ -55,16 +60,25 @@ $(document).ready(function() {
 
     });
 })
-// OurWork flip ------------------------------------------------------
-$('.our-work-div').hover(function() {
-  console.log("pass")
-    $(this).animate({
+// OurWork show ------------------------------------------------------
+$('.our-work-div').mouseenter(function() {
+  $(this).find(".our-work-div-info").show();
+  $(this).find("img").animate({
+    opacity: ".2",
+  }, 1)
+  $(this).animate({
       backgroundColor: "#f28423",
       opacity: ".9",
-    })
-
+    }, 200)
+}).mouseleave(function() {
+  $( ".our-work-div").find("img").animate({
+    opacity: "1",
+  }, 1)
+  $( ".our-work-div-info" ).hide();
+  $(this).animate({
+      backgroundColor: "#fff",
+    }, 200)
 })
-
 
 
 // Dropwdown menu ----------------------------------------------------
@@ -76,7 +90,7 @@ $('ul.nav li.dropdown').hover(function() {
 
 
 // Color Rotation ----------------------------------------------------
-var colorPallete = ['#f28423', '#685b4b', '#487271', '#e3d982', "#ac573a", "#80a57c", "#907558", "#9ea874"]
+var colorPallete = ['#f28423', '#685b4b', '#487271', '#e3d982', "#ac573a", "#80a57c",]
 
 var dark = ['#872729', '#d45f33', '#b1200f']
 
