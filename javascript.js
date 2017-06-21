@@ -90,21 +90,16 @@ $('ul.nav li.dropdown').hover(function() {
 
 
 // Color Rotation ----------------------------------------------------
-var colorPallete = ['#f28423', '#685b4b', '#487271', '#e3d982', "#ac573a", "#80a57c",]
-
-var dark = ['#872729', '#d45f33', '#b1200f']
-
-var light = ['dacd43', '5b9f90', 'd45f33', 'white']
-
+var colorPallete = ['#f28423', '#685b4b', '#e3d982', "#872729", "#80a57c",'#487271']
 
 function changeColorArmet() {
     if (colorPallete.length === 0) {
-        colorPallete = ['#f28423', '#685b4b', '#487271', '#e3d982', "#ac573a", "#80a57c", "#907558", "#9ea874"]
+        colorPallete = ['#f28423', '#685b4b', '#e3d982', "#872729", "#80a57c",'#487271']
     }
     var n = Math.floor(Math.random() * colorPallete.length)
 	$("#armet").animate({
     backgroundColor: colorPallete[n],
-}, 1000);
+}, 'slow');
 
     colorPallete.splice(n, 1)
 	console.log(colorPallete[n])
@@ -113,12 +108,12 @@ function changeColorArmet() {
 
 function changeColorDavis() {
     if (colorPallete.length === 0) {
-        colorPallete = ['#f28423', '#685b4b', '#487271', '#e3d982', "#ac573a", "#80a57c", "#907558", "#9ea874"]
+        colorPallete = ['#f28423', '#685b4b', '#e3d982', "#872729", "#80a57c",'#487271']
     }
     var n = Math.floor(Math.random() * colorPallete.length)
 	$("#davis").animate({
     backgroundColor: colorPallete[n],
-}, 1000);
+}, 'slow');
     colorPallete.splice(n, 1)
 	console.log(colorPallete[n])
 	setTimeout(changeColorNewlove, 5000)
@@ -126,12 +121,12 @@ function changeColorDavis() {
 
 function changeColorNewlove() {
     if (colorPallete.length === 0) {
-        colorPallete = ['#f28423', '#685b4b', '#487271', '#e3d982', "#ac573a", "#80a57c", "#907558", "#9ea874"]
+        colorPallete = ['#f28423', '#685b4b', '#e3d982', "#872729", "#80a57c",'#487271']
     }
     var n = Math.floor(Math.random() * colorPallete.length)
 	$("#newlove").animate({
     backgroundColor: colorPallete[n],
-}, 1000);
+}, 'slow');
     colorPallete.splice(n, 1)
 	console.log(colorPallete[n])
 	setTimeout(changeColorArmet, 5000)
