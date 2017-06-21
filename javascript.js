@@ -2,11 +2,6 @@ $(document).ready(function() {
 
     var activePanel;
     $(activePanel).addClass('active');
-    $("#accordion .panel").css({
-        width: "33%"
-    });
-
-    $("#about").attr("")
 
 // Accordian ----------------------------------------------------
     $("#accordion .panel").on('click', function(event) {
@@ -16,17 +11,10 @@ $(document).ready(function() {
 
             $('#accordion .panel').animate({
                 width: "20%",
-            }, {
-                duration: 300,
-                queue: false
-            }).animate({
-                alignItems: "flex-start"
-            }, {
-                duration: 300
-            });
-            $(this).find(".panel-title").animate({
+            }, 300);
+            $(".panel-title").animate({
               top: "50vh",
-              left: "-30vh",
+              left: "0",
             });
             $('#accordion .panel').removeClass('active');
 
@@ -39,20 +27,13 @@ $(document).ready(function() {
             });
             $(this).animate({
                 width: "60%"
-            }, {
-                duration: 300,
-                queue: false
-            }).animate({
-                alignItems: "flex-start"
-            }, {
-                duration: 300
-            });
+            }, 300);
         } else {
             $('#accordion .panel').removeClass('active');
             $("#accordion .panel").animate({
                 width: "33%"
             });
-            $(this).find(".panel-title").animate({
+            $(".panel-title").animate({
               top: "50vh",
               left: "0",
             });
@@ -102,7 +83,7 @@ function changeColorArmet() {
 }, 'slow');
 
     colorPallete.splice(n, 1)
-	console.log(colorPallete[n])
+	// console.log(colorPallete[n])
 	setTimeout(changeColorDavis, 5000)
 }
 
@@ -115,7 +96,7 @@ function changeColorDavis() {
     backgroundColor: colorPallete[n],
 }, 'slow');
     colorPallete.splice(n, 1)
-	console.log(colorPallete[n])
+	// console.log(colorPallete[n])
 	setTimeout(changeColorNewlove, 5000)
 }
 
@@ -128,7 +109,7 @@ function changeColorNewlove() {
     backgroundColor: colorPallete[n],
 }, 'slow');
     colorPallete.splice(n, 1)
-	console.log(colorPallete[n])
+	// console.log(colorPallete[n])
 	setTimeout(changeColorArmet, 5000)
 
 }
