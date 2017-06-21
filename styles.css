@@ -4,13 +4,8 @@ html {
 }
 body {
 	width: 100vw;
+}
 
-}
-h1 {
-	font-family: 'Oswald', sans-serif;
-	font-size: 45px;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
 p {
 	font-family: 'Oswald', sans-serif;
 	font-size: 18px;
@@ -19,7 +14,7 @@ p {
 }
 
 
-/*Landing Page*/
+/*Landing Page--------------------------------------*/
 #accordion {
 	background-color: black;
 	list-style:none;
@@ -29,30 +24,23 @@ p {
 	overflow:hidden;
 	border-radius: 0px;
 	float: left;
+	border-bottom: 20px solid black;
 }
 #accordion .panel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	float:left;
-	padding-bottom: 75px;
 	height:100vh;
 	width:25%;
 	overflow:hidden;
-	text-decoration:none;
-	font-size:16px;
-	line-height:1.5em;
+	padding-left: 30px;
 	border-right: 15px solid black;
-	border-bottom: 5px solid black;
+
 }
 #accordion .panel.active {
 	width:50%;
-}
-
-.panelContent h1 {
-
-	text-align: center;
-}
-
-.last {
-	border:none
 }
 #armet {
 	background-color: #f28423;
@@ -62,22 +50,13 @@ p {
 	justify-content: center;
 	align-items: center;
 }
-#armet h1 {
-	font-weight: 600;
-}
-.heading-text {
 
-}
 #davis {
 	background-color: white;
 	color: black;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-#davis h1 {
-	font-weight: 600;
-
 }
 #newlove {
 	background-color: #872729;
@@ -86,37 +65,68 @@ p {
 	justify-content: center;
 	align-items: center;
 }
-#newlove h1 {
+.panel-title {
+	font-family: 'Oswald', sans-serif;
+	font-size: 45px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-align: center;
+	z-index: 1;
 	font-weight: 600;
+	position: relative;
+	top: 48vh;
+	justify-content: center;
 }
-.overlay {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background: rgba(0, 0, 0, 0.5);
-	opacity: .5;
-	z-index: 0;
+.last {
+	border:none
 }
 .panelContent {
 	z-index: 1;
 }
 
-/*Content*/
+/*Content---------------------------------------*/
+.our-work {
+	background-color: #white;
+	color: #222;
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding-left: 50px;
+	padding-right: 50px;
 
+}
+.our-work-div {
+	margin: 25px;
+	width: 400px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+
+}
+.our-work img {
+	width: 100%;
+
+}
+
+.our-work-div h1 {
+	position: absolute;
+
+}
+
+
+/*page-2--------------------------------------*/
 .about {
 	padding-bottom: 35px;
 	background-color: white;
 	padding-bottom: 50px;
 }
-
-.projects {
-	background-color: #white;
-	color: #222;
-	padding-bottom: 50px;
-}
 .architects {
 	background-color: #f28423;
-padding-bottom: 50px;
+	padding-bottom: 50px;
 	color: black;
 }
 .licenses {
@@ -130,18 +140,30 @@ padding-bottom: 50px;
 	padding-bottom: 50px;
 
 }
+
+/*Contact----------------------------------------*/
 .contact {
 	background-color: #222;
 	color: #9d9d9d;
 	padding-bottom: 100px;
 }
+.contact-title {
+	margin-bottom: 25px;
+}
+.red{
+    color:red;
+    }
+.form-area {
+	padding: 0px 40px 60px;
+	border-radius: 5px;
+	}
 
-/*spacer*/
+/*spacer--------------------------------------*/
 .spacer {
 	border-top: 5px solid black;
 }
 
-/*Navbar*/
+/*Navbar--------------------------------------*/
 .navbar-fixed-bottom {
 	height: 70px;
 }
@@ -160,16 +182,4 @@ padding-bottom: 50px;
 }
 .dropdown-li {
 	text-align: center;
-}
-
-/*///Projects*/
-.projectsHolder {
-	height: 600px;
-	overflow: auto;
-  	white-space: nowrap;
-	
-}
-.projectsText {
-	text-align: center;
-	white-space: normal;
 }
