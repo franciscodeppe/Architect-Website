@@ -5,7 +5,7 @@ html {
 
 body {
   width: 100%;
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 p {
@@ -17,58 +17,101 @@ p {
 
 /*Landing Page--------------------------------------*/
 
-#accordion {
-  background-color: black;
-  list-style: none;
-  padding: 0;
+.header {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
-  border-radius: 0px;
-  float: left;
-  border-bottom: 20px solid black;
 }
 
-#accordion .panel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  float: left;
-  height: 100vh;
-  width: 25%;
-  overflow: hidden;
-  padding-left: 30px;
-  border-right: 15px solid black;
+.carousel {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
-#accordion .panel.active {
-  width: 50%;
+.carousel-inner {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
-#armet {
+.item {
+  height: 100%;
+}
+
+.item img {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: .3;
+}
+
+#one {
+  position: absolute;
+  z-index: 0;
   background-color: #f28423;
   color: white;
-  border-left: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: 0px;
 }
 
-#davis {
+#two {
+  z-index: 0;
   background-color: white;
   color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  left: 33.33%;
 }
 
-#newlove {
+#three {
+  position: absolute;
+  left: 66.66%;
+  z-index: 0;
   background-color: #872729;
   color: white;
+}
+
+#armet {}
+
+#davis {}
+
+#newlove {}
+
+.vertical-spacer {
+  position: absolute;
+  height: 100vh;
+  right: 0;
+  width: 10px;
+  background-color: black;
+  z-index: 3;
+}
+
+.panels {
+  height: 100vh;
+  width: 33.33%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.panel-content {
+  z-index: 3;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .panel-title {
@@ -78,34 +121,33 @@ p {
   text-align: center;
   z-index: 1;
   font-weight: 600;
-  position: relative;
-  top: 48vh;
   justify-content: center;
+  align-items: baseline;
+  color: white;
 }
 
 .panel-text {
-  text-align: center;
-  position: relative;
-  width: 40vw;
-  top: 30vh;
-  left: 10vw;
-}
-
-.last {
-  border: none
-}
-
-.panelContent {
-  z-index: 1;
+  text-align: left;
+  z-index: 3;
+  z-index: 3;
+  color: white;
+  display: none;
 }
 
 
 /*Content---------------------------------------*/
 
+#our-work {
+  padding-top: 50px;
+  border-top: 10px solid black;
+  float: left;
+  height: auto;
+  width: 100%;
+  background-color: white;
+}
+
 .our-work {
-  background-color: #white;
   color: #222;
-  padding-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -118,7 +160,7 @@ p {
   margin: 25px;
   min-width: 400px;
   min-height: 400px;
-	width: 400px;
+  width: 400px;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -127,15 +169,39 @@ p {
   padding: 10px;
 }
 
-.our-work img {
-  width: 100%;
-}
-
 .our-work-div-info {
   position: absolute;
   text-align: center;
   width: 300px;
   display: none;
+}
+
+.our-work-image {
+  width: 100%;
+  position: initial;
+  margin: auto;
+  justify-content: flex-end;
+  margin-bottom: 0px;
+}
+
+
+/*Clients ------------------------------------------*/
+
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 25px;
+}
+
+.clients-logo {
+  width: 200px;
+  margin: 30px;
+  flex-wrap: wrap;
 }
 
 
@@ -156,12 +222,6 @@ p {
 .licenses {
   background-color: black;
   color: #9d9d9d;
-  padding-bottom: 50px;
-}
-
-.clients {
-  background-color: #b1200f;
-  color: white;
   padding-bottom: 50px;
 }
 

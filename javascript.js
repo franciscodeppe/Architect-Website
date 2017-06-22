@@ -1,49 +1,20 @@
-$(document).ready(function() {
+// Header show animations-----------------------------------------------
+// $('.panel-content').mouseenter(function() {
+//   $(this).find(".panel-text").show("fast");
+//   // $(this).find(".panel-title").animate({
+//   //
+//   // }, 1)
+// }).mouseleave(function() {
+//   $( ".panel-text" ).hide("fast");
+//   // $(this).find(".panel-title").animate({
+//   // }, 1)
+// })
 
-    var activePanel;
-    $(activePanel).addClass('active');
 
-// Accordian ----------------------------------------------------
-    $("#accordion .panel").on('click', function(event) {
-      event.preventDefault()
-        if ($(this).is('.active') !== true) {
-// inactive panels---------------------------------------
-
-            $('#accordion .panel').animate({
-                width: "20%",
-            }, 300);
-            $(".panel-title").animate({
-              top: "50vh",
-              left: "0",
-            });
-            $('#accordion .panel').removeClass('active');
-
-// For active panel --------------------------------------
-
-            $(this).addClass('active');
-            $(this).find(".panel-title").animate({
-              top: "25vh",
-              left: "-30vh",
-            });
-            $(this).animate({
-                width: "60%"
-            }, 300);
-        } else {
-            $('#accordion .panel').removeClass('active');
-            $("#accordion .panel").animate({
-                width: "33%"
-            });
-            $(".panel-title").animate({
-              top: "50vh",
-              left: "0",
-            });
-        };
-
-    });
-})
 // OurWork show ------------------------------------------------------
 $('.our-work-div').mouseenter(function() {
   $(this).find(".our-work-div-info").show();
+  $(this).find( ".our-work-title" ).hide();
   $(this).find("img").animate({
     opacity: ".2",
   }, 1)
@@ -56,6 +27,7 @@ $('.our-work-div').mouseenter(function() {
     opacity: "1",
   }, 1)
   $( ".our-work-div-info" ).hide();
+  $(this).find( ".our-work-title" ).show();
   $(this).animate({
       backgroundColor: "#fff",
     }, 200)
@@ -78,7 +50,7 @@ function changeColorArmet() {
         colorPallete = ['#f28423', '#685b4b', '#e3d982', "#872729", "#80a57c",'#487271']
     }
     var n = Math.floor(Math.random() * colorPallete.length)
-	$("#armet").animate({
+	$("#one").animate({
     backgroundColor: colorPallete[n],
 }, 'slow');
 
@@ -92,7 +64,7 @@ function changeColorDavis() {
         colorPallete = ['#f28423', '#685b4b', '#e3d982', "#872729", "#80a57c",'#487271']
     }
     var n = Math.floor(Math.random() * colorPallete.length)
-	$("#davis").animate({
+	$("#two").animate({
     backgroundColor: colorPallete[n],
 }, 'slow');
     colorPallete.splice(n, 1)
@@ -105,7 +77,7 @@ function changeColorNewlove() {
         colorPallete = ['#f28423', '#685b4b', '#e3d982', "#872729", "#80a57c",'#487271']
     }
     var n = Math.floor(Math.random() * colorPallete.length)
-	$("#newlove").animate({
+	$("#three").animate({
     backgroundColor: colorPallete[n],
 }, 'slow');
     colorPallete.splice(n, 1)
