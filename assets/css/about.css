@@ -22,22 +22,27 @@ p {
 }
 .image img {
 	width: 100%;
+  min-width: 350px;
 }
 .about-text-wrap {
 	width: 65%;
+  min-width: 350px;
+  margin: 20px;
 }
 .section {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 	align-content: center;
 }
 .row {
 	padding-top: 20px;
 	padding-bottom: 20px;
+  width: 100%;
 }
 .rotating-image {
 	width: 30%;
+  min-width: 300px;
 	height: 150px;
 }
