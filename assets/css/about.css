@@ -1,0 +1,43 @@
+html {
+  background-color: #342e3a;
+  letter-spacing: 1.5px;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  word-spacing: 2px;
+}
+.wrapper {
+	margin: 0px 50px 75px 50px;
+}
+
+.image {
+	width: 30%;
+}
+.image img {
+	width: 100%;
+}
+.about-text-wrap {
+	width: 65%;
+}
+.section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+}
+.row {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.rotating-image {
+	width: 30%;
+	height: 150px;
+}
