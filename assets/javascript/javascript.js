@@ -12,9 +12,9 @@
 
 
 // OurWork show ------------------------------------------------------
-$('.our-work-div').mouseenter(function() {
-  $(this).find(".our-work-div-info").show();
-  $(this).find( ".our-work-title" ).hide();
+$('.services-div').mouseenter(function() {
+  $(this).find(".services-div-info").show();
+  $(this).find( ".services-title" ).hide();
   $(this).find("img").animate({
     opacity: ".2",
   }, 1)
@@ -23,11 +23,11 @@ $('.our-work-div').mouseenter(function() {
       opacity: ".9",
     }, 200)
 }).mouseleave(function() {
-  $( ".our-work-div").find("img").animate({
+  $( ".services-div").find("img").animate({
     opacity: "1",
   }, 1)
-  $( ".our-work-div-info" ).hide();
-  $(this).find( ".our-work-title" ).show();
+  $( ".services-div-info" ).hide();
+  $(this).find( ".services-title" ).show();
   $(this).animate({
       backgroundColor: "#fff",
     }, 200)
