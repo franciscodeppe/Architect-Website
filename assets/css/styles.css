@@ -156,9 +156,13 @@ p {
   padding-right: 50px;
   flex-wrap: wrap;
 }
+.services-div h1 {
+  margin-top: 30%;
+  font-size: 20px;
+}
 
 .services-div {
-  margin: 25px;
+  margin: 20px;
   min-width: 250px;
   min-height: 250px;
   width: 250px;
@@ -173,7 +177,7 @@ p {
 .services-div-info {
   position: absolute;
   text-align: center;
-  width: 300px;
+  width: 225px;
   display: none;
 }
 
@@ -187,7 +191,10 @@ p {
 
 
 /*Clients ------------------------------------------*/
-
+.client-section {
+  float: left;
+  background-color: white;
+}
 .clients {
   display: flex;
   flex-wrap: wrap;
